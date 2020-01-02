@@ -3,8 +3,9 @@ FROM python:3.7.3-stretch
 # Working Directory
 WORKDIR /app
 
-# Copy source code to working directory
+# Copy source code to working directory and also copy the plugin libraries
 COPY . flask_app/web.py /app/
+COPY . nlib /app/                       
 
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
